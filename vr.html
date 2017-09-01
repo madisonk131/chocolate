@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+  <script src="vr.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-entity camera look-controls>
+      <a-entity position="0 0 70">
+        <a-camera>
+          <a-cursor color="green">
+          </a-cursor>
+        </a-camera>
+      </a-entity>
+    </a-entity>
+
+    <a-assets>
+      <a-asset-item id="chocobj" src="vr-images/chocolate-obj/chocolate.obj"></a-asset-item>
+      <a-asset-item id="chocmtl" src="vr-images/chocolate-obj/chocolate.mtl"></a-asset-item>
+      <img id="chocwall" src="vr-images/chocwalls.jpg">
+      <img id="whitechocwall" src="vr-images/whitechocwalls.jpg">
+    </a-assets>
+
+    <!--walls-->
+    <a-plane id="front" material="src:#whitechocwall" height="100" width="150" position="-2.168 0 -52.324"></a-plane>
+    <a-plane id="left" material="src:#chocwall" height="100" width="150" position="-76.828 0 21.574" rotation="0 90 0"></a-plane>
+    <a-plane id="right" material="src:#chocwall" height="100" width="150" position="73.334 -0.729 21.961" rotation="0 -90 0"></a-plane>
+    <a-plane id="back" material="src:#chocwall" height="100" width="150" position="-2.592 -0.663 91.398" rotation="0.458 180 -180"></a-plane>
+    <!--<a-plane id="front" material="src:#whitechocwall" height="100" width="150" position="-2.168 0 -23.538"></a-plane>-->
+    <!--<a-plane id="left" material="src:#whitechocwall" height="100" width="150" position="-37.005 0 15.942" rotation="0 90 0"></a-plane>-->
+    <!--<a-plane id="right" material="src:#whitechocwall" height="100" width="150" position="32.159 0 24" rotation="0 -90 0"></a-plane>-->
+    <!--<a-plane id="back" material="src:#whitechocwall" height="100" width="150" position="-2.150 0 44.604" rotation="0.458 180.000 -180.000"></a-plane>-->
+
+    <!--floor-->
+    <!--<a-plane id="floor" material="src:#chocwall" height="150" width="150" position="15.036 -20.050 -7.244" rotation="-90 -180 0"></a-plane>-->
+    <a-plane id="floor" material="src:#chocwall" height="220" width="240" position="10.485 -50.236 11.552" rotation="-90 -180 0"></a-plane>
+
+    <!--ceiling-->
+    <a-plane id="ceiling" material="src:#chocwall" height="220" width="240" position="10.485 50.236 11.552" rotation="90 180 0"></a-plane>
+
+    <!--<a-text value="Click to reveal the next NYC chocolate bar you should visit!" scale="7 7 7" position="-15 14 18" color="black"></a>-->
+    <!--</a-text>-->
+
+    <!--chocolate bars-->
+    <a-box onclick="toWebsite('maxBrenner')" height="15" width="8" depth="10" scale=".75 .75 .75" position="0 0 -10.000" rotation="0 0 0" opacity="0">
+      <a-animation attribute="position" begin="mouseenter" dur="100" repeat="3" direction="alternate" to="0 5 -5">
+      </a-animation>
+      <a-obj-model src="#chocobj" mtl="#chocmtl" scale="1.15 1.15 1.15" position="0 0 -10.000" rotation="0 90 20"></a-obj-model>
+    </a-box>
+
+    <!--<a-box onclick="maxBrenner()" height="15" width="8" depth="10" scale=".75 .75 .75" position="0 0 -10.000" rotation="0 0 0" opacity="0"></a-box>-->
+    <!--<a-obj-model src="#chocobj" mtl="#chocmtl" scale=".75 .75 .75" position="0 0 -10.000" rotation="0 90 20"></a-obj-model>-->
+
+    <a-box onclick="toWebsite('chocoRoom')" height="15" width="8" depth="10" scale=".75 .75 .75" position="0 15 -10.000" rotation="0 0 0" opacity="0">
+      <a-animation attribute="position" begin="mouseenter" dur="100" repeat="3" direction="alternate" to="0 15 -5">
+      </a-animation>
+      <a-obj-model src="#chocobj" mtl="#chocmtl" scale="1.15 1.15 1.15" position="0 15 -10.000" rotation="0 90 20"></a-obj-model>
+    </a-box>
+
+    <a-box onclick="toWebsite('ayza')" height="15" width="8" depth="10" scale=".75 .75 .75" position="0 -15 -10.000" rotation="0 0 0" opacity="0">
+      <a-animation attribute="position" begin="mouseenter" dur="100" repeat="3" direction="alternate" to="0 -5 -5">
+      </a-animation>
+      <a-obj-model src="#chocobj" mtl="#chocmtl" scale="1.15 1.15 1.15" position="0 -15 -10.000" rotation="0 90 20"></a-obj-model>
+    </a-box>
+
+    <a-box onclick="toWebsite('fikaNyc')" height="15" width="8" depth="10" scale=".75 .75 .75" position="-20 0 -10.000" rotation="0 0 0" opacity="0">
+      <a-animation attribute="position" begin="mouseenter" dur="100" repeat="3" direction="alternate" to="-20 5 -5">
+      </a-animation>
+      <a-obj-model src="#chocobj" mtl="#chocmtl" scale="1.15 1.15 1.15" position="-20 0 -10.000" rotation="0 90 20"></a-obj-model>
+    </a-box>
+
+    <a-box onclick="toWebsite('serendipity')" height="15" width="8" depth="10" scale=".75 .75 .75" position="-20 15 -10.000" rotation="0 0 0" opacity="0">
+      <a-animation attribute="position" begin="mouseenter" dur="100" repeat="3" direction="alternate" to="-20 15 -5">
+      </a-animation>
+      <a-obj-model src="#chocobj" mtl="#chocmtl" scale="1.15 1.15 1.15" position="-20 15 -10.000" rotation="0 90 20"></a-obj-model>
+    </a-box>
+
+    <a-box onclick="toWebsite('lilac')" height="15" width="8" depth="10" scale=".75 .75 .75" position="-20 -15 -10.000" rotation="0 0 0" opacity="0">
+      <a-animation attribute="position" begin="mouseenter" dur="100" repeat="3" direction="alternate" to="-20 -5 -5">
+      </a-animation>
+      <a-obj-model onclick="" src="#chocobj" mtl="#chocmtl" scale="1.15 1.15 1.15" position="-20 -15 -10.000" rotation="0 90 20"></a-obj-model>
+    </a-box>
+
+    <a-box onclick="toWebsite('jt')" height="15" width="8" depth="10" scale=".75 .75 .75" position="20 0 -10.000" rotation="0 0 0" opacity="0">
+      <a-animation attribute="position" begin="mouseenter" dur="100" repeat="3" direction="alternate" to="20 5 -5">
+      </a-animation>
+      <a-obj-model onclick="" src="#chocobj" mtl="#chocmtl" scale="1.15 1.15 1.15" position="20 0 -10.000" rotation="0 90 20"></a-obj-model>
+    </a-box>
+
+    <a-box onclick="toWebsite('tache')" height="15" width="8" depth="10" scale=".75 .75 .75" position="20 15 -10.000" rotation="0 0 0" opacity="0">
+        <a-animation attribute="position" begin="mouseenter" dur="100" repeat="3" direction="alternate" to="20 15 -5">
+        </a-animation>
+        <a-obj-model onclick="" src="#chocobj" mtl="#chocmtl" scale="1.15 1.15 1.15" position="20 15 -10.000" rotation="0 90 20"></a-obj-model>
+    </a-box>
+
+    <a-box onclick="toWebsite('marie')" height="15" width="8" depth="10" scale=".75 .75 .75" position="20 -15 -10.000" rotation="0 0 0" opacity="0">
+        <a-animation attribute="position" begin="mouseenter" dur="100" repeat="3" direction="alternate" to="20 -5 -5">
+        </a-animation>
+        <a-obj-model onclick="" src="#chocobj" mtl="#chocmtl" scale="1.15 1.15 1.15" position="20 -15 -10.000" rotation="0 90 20"></a-obj-model>
+    </a-box>
+
+  </a-scene>
+</body>
+
+</html>

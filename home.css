@@ -1,0 +1,138 @@
+body {
+    background-color: #3c1c0d;
+    margin: 0;
+}
+
+.container {
+    font-family: "Karla";
+}
+
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid #3c1c0d;
+	padding: 0;
+	font-family: "Carrois Gothic SC";
+	background-color: #C1AA64;
+}
+
+.nav-item {
+	padding-left: 7px;
+	color: #3c1c0d;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: black;
+}
+
+#navbar-title {
+    font-size: 30px;
+    font-style: inherit;
+    color: white;
+}
+
+.navbar-nav {
+    font-size: 20px;
+}
+
+#tour {
+    float: right;
+}
+
+.para {
+    font-size: 27px;
+}
+
+#tagline {
+    font-size: 35px;
+    font-style: inherit;
+}
+
+.sections {
+    color: #2f2f2f;
+    background-color: #C1AA64;
+    padding: 30px 100px;
+    text-align: justify;
+    font-family: "Karla";
+    font-size: 20px;
+}
+
+
+.bgimg-1,.bgimg-2,.bgimg-3,.bgimg-4,.bgimg-5,.bgimg-6,.bgimg-7,.bgimg-8,.bgimg-9,.bgimg-10 {
+  position: relative;
+  opacity: 0.9;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-family: "Carrois Gothic SC";
+    color: white;
+}
+
+mark {
+    background-color: #C1AA64;
+}
+
+.subtitle {
+    border-bottom: 1px solid #957C25;
+}
+
+.healthLabels {
+    border-top: 1px solid #957C25;
+    border-bottom: 1px solid #957C25;
+    padding: 12px 0px;
+    margin: 15px 0px;
+}
+
+ul {
+    margin-top: 15px;
+}
+
+
+.col-md-4 {
+    padding: 0;
+    border: 10px solid #C1AA64;
+    
+}
+
+#description {
+    border: 10px solid #C1AA64;
+    background: #C1AA64;
+}
+
+#map {
+        width: 60%;
+        height: 400px;
+        background-color: grey;
+        margin-left: 20%;
+      }
+      
+#places {
+    width: 80%;
+    margin-left: 10%;
+    border: 10px solid #C1AA64;
+}
+
+.place {
+    padding: 0;
+    color: #eee;
+    width: 100%;
+    border-bottom: 2px solid #C1AA64;
+}
+
+.place p {
+    font-size: 20px;
+}
+
+.text {
+    padding-left: 30px;
+}
